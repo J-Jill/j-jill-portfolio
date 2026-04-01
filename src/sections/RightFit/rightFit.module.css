@@ -1,0 +1,97 @@
+.section {
+  padding: 130px 52px;
+  border-top: 1px solid var(--border);
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--elements);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.label::before {
+  content: "—";
+  font-family: var(--sans);
+  font-weight: 300;
+}
+
+/*
+  El título usa white-space: nowrap para que desborde el viewport.
+  En desktop grande "The right fit matters" sale por la derecha.
+  Ese corte deliberado es el efecto editorial que buscamos.
+*/
+.title {
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  margin-bottom: 80px;
+}
+.titleEm {
+  font-style: italic;
+  color: var(--secondary);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+  transition: background var(--transition-fast);
+}
+.row:first-child {
+  border-top: 1px solid var(--border);
+}
+.row:hover {
+  /* Efecto hover sutil: el fondo se extiende hasta los bordes de la sección */
+  background: rgba(255, 255, 255, 0.015);
+  margin: 0 -52px;
+  padding: 36px 52px;
+}
+
+.rowLeft {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.dash {
+  color: var(--elements);
+  font-weight: 300;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.rowTitle {
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* La última fila (highlight) tiene el título en itálica y color secundario */
+.highlight .rowTitle {
+  color: var(--secondary);
+  font-style: italic;
+}
+
+.rowDesc {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--secondary);
+  line-height: 1.85;
+  padding-top: 4px;
+}
