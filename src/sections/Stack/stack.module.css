@@ -1,0 +1,156 @@
+.section {
+  padding: 130px 52px;
+  border-top: 1px solid var(--border);
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--elements);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.label::before {
+  content: "—";
+  font-family: var(--sans);
+  font-weight: 300;
+}
+
+.title {
+  font-size: var(--text-section);
+  font-weight: 800;
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  margin-bottom: 72px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+  Cada fila es un grid de 2 columnas:
+  - 200px para el nombre de la capa (columna fija)
+  - 1fr para las pills de tecnología (ocupa el resto)
+  
+  El border-right en layerInfo crea la línea divisoria vertical.
+*/
+.row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition-fast);
+}
+.row:first-child {
+  border-top: 1px solid var(--border);
+}
+.row:hover {
+  background: var(--bg3);
+}
+
+.layerInfo {
+  padding: 28px 32px 28px 0;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.layerLabel {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--elements);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.layerDesc {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--elements);
+  opacity: 0.5;
+  line-height: 1.5;
+}
+
+.techs {
+  padding: 24px 0 24px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/*
+  Tooltip CSS puro con data-tooltip y ::after.
+  
+  Cómo funciona:
+  1. El span tiene el atributo data-tooltip="texto del tooltip"
+  2. ::after usa attr(data-tooltip) para leer ese texto
+  3. En hover, el ::after se hace visible con opacity 1
+  
+  Ventaja vs JavaScript: cero JS, cero event listeners.
+  Limitación: no soporta HTML en el tooltip (solo texto plano).
+  Para este caso, es suficiente y más performante.
+*/
+.tech {
+  position: relative;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--secondary);
+  padding: 8px 20px;
+  border: 1px solid var(--border2);
+  border-radius: 100px;
+  cursor: default;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+  white-space: nowrap;
+}
+.tech:hover {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Tooltip pseudo-elemento */
+.tech::after {
+  content: attr(data-tooltip); /* lee el atributo data-tooltip del HTML */
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  color: var(--secondary);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  padding: 6px 12px;
+  white-space: nowrap;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  z-index: 10;
+}
+.tech:hover::after {
+  opacity: 1;
+}
+
+/* Fila "Learning now" — estilo diferente para indicar WIP */
+.learningRow .tech {
+  color: var(--elements);
+  border-style: dashed;
+  font-style: italic;
+}
+.learningRow .tech:hover {
+  color: var(--secondary);
+  border-style: solid;
+}
