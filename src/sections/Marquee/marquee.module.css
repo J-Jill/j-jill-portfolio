@@ -1,0 +1,47 @@
+.wrap {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+  white-space: nowrap;
+}
+
+.track {
+  display: inline-flex;
+  animation: marquee 24s linear infinite;
+}
+.track:hover {
+  animation-play-state: paused;
+}
+
+.item {
+  font-size: clamp(52px, 10vw, 130px);
+  font-weight: 800;
+  line-height: 1;
+  padding: 0 32px;
+  white-space: nowrap;
+  /* Outline text — color transparente, stroke visible */
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12);
+  transition:
+    color 0.3s,
+    -webkit-text-stroke 0.3s;
+  cursor: default;
+}
+.item:hover {
+  color: var(--text);
+  -webkit-text-stroke: 1px transparent;
+}
+
+.sep {
+  color: var(--elements);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  } /* -50% = un set completo */
+}
