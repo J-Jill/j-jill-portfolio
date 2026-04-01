@@ -1,0 +1,68 @@
+/*
+  PROPÓSITO: Una sola fuente de verdad para todos los valores del diseño.
+  REGLA: Nunca escribas un color, font-family o font-size hardcodeado
+         en ningún .module.css — siempre usa una variable de aquí.
+  POR QUÉ: Si el cliente pide cambiar el color de fondo, cambias --bg
+           aquí y se actualiza en todo el portfolio automáticamente.
+*/
+
+/* El selector :root aplica al elemento html — disponible globalmente */
+:root {
+  /* ── COLORES DEL SISTEMA ─────────────────────────────────────────── */
+  /* Fondos — de más oscuro a más claro */
+  --bg:        #050506;   /* Near-black. No pure #000 — más suave en OLED */
+  --bg2:       #0d0d0e;   /* Fondo secundario */
+  --bg3:       #141415;   /* Cards en hover, elementos elevados */
+  --bg4:       #1a1a1b;   /* Cards muy elevadas */
+
+  /* Texto */
+  --text:      #FFFFFF;   /* Texto principal */
+  --secondary: #A0A0A0;   /* Texto de soporte, descripciones */
+  --elements:  #6A6B6B;   /* Labels, placeholders, borders de texto */
+
+  /* Borders */
+  --border:    rgba(255,255,255,0.065);  /* Sutil — separadores */
+  --border2:   rgba(255,255,255,0.11);   /* Más visible — tags, inputs */
+
+  /* ── TIPOGRAFÍA ──────────────────────────────────────────────────── */
+  --sans: 'DM Sans', -apple-system, sans-serif;
+  /* -apple-system como fallback — si DM Sans no carga, usa la fuente del OS */
+  --mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* ── ESCALA TIPOGRÁFICA CON CLAMP ────────────────────────────────── */
+  /*
+    clamp(MIN, PREFERRED, MAX)
+    MIN: nunca más pequeño que esto (mobile)
+    PREFERRED: tamaño relativo al viewport (vw)
+    MAX: nunca más grande que esto (desktop)
+    
+    Resultado: tipografía responsive SIN media queries
+  */
+  --text-display: clamp(88px, 19vw, 240px);  /* Hero: 88px → 240px */
+  --text-section: clamp(68px, 13vw, 180px);  /* Section titles */
+  --text-h2:      clamp(36px, 5vw, 64px);    /* Sub-section */
+  --text-h3:      clamp(20px, 2.5vw, 34px);  /* Cards, items */
+  --text-body:    16px;
+  --text-small:   14px;
+  --text-label:   11px;
+
+  /* ── TRANSICIONES ────────────────────────────────────────────────── */
+  --transition-fast: 150ms ease;
+  --transition-med:  250ms ease;
+  --transition-slow: 400ms cubic-bezier(.25,.46,.45,.94);
+}
+
+/* Reset mínimo — solo lo necesario */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;  /* fuentes más suaves en Mac */
+  cursor: none;  /* oculta el cursor nativo — usamos el custom */
+}
