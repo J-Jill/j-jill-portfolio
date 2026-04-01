@@ -1,0 +1,93 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 52px;
+  border-bottom: 1px solid transparent;
+  transition:
+    background var(--transition-slow),
+    border-color var(--transition-slow);
+}
+
+/* Estado scrolled: aparece el fondo con blur */
+.scrolled {
+  background: rgba(5, 5, 6, 0.94);
+  border-color: var(--border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.name {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text);
+  text-decoration: none;
+  /* Animación de entrada — opacidad 0 en CSS, animación en keyframes */
+  opacity: 0;
+  animation: fadeDown 0.6s ease 0.1s forwards;
+}
+
+.links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  opacity: 0;
+  animation: fadeDown 0.6s ease 0.2s forwards;
+}
+.links a {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--secondary);
+  text-decoration: none;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+.links a:hover {
+  color: var(--text);
+}
+
+.langSwitch {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0;
+  animation: fadeDown 0.6s ease 0.3s forwards;
+}
+.langBtn,
+.langActive {
+  font-family: var(--mono);
+  font-size: 11px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+.langBtn {
+  color: var(--elements);
+}
+.langActive {
+  color: var(--text);
+}
+.langBtn:hover {
+  color: var(--secondary);
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
