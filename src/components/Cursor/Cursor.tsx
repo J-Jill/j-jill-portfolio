@@ -6,52 +6,27 @@ export function Cursor() {
   const ringRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Posición real del ratón
     let mx = 0,
       my = 0;
-    // Posición interpolada del anillo (lag)
     let rx = 0,
       ry = 0;
     let rafId: number;
 
+    // ── Event listeners FUERA del loop ──────────────────────
     const onMove = (e: MouseEvent) => {
       mx = e.clientX;
       my = e.clientY;
     };
 
-    const loop = () => {
-      const dot = dotRef.current;
-      const ring = ringRef.current;
-      if (!dot || !ring) {
-        rafId = requestAnimationFrame(loop);
-        return;
-      }
-
-      // Punto: posición exacta del ratón
-      dot.style.left = mx + "px";
-      dot.style.top = my + "px";
-
-      // Anillo: interpolación lineal para el lag
-      // Cada frame se mueve el 10% de lo que queda hasta el ratón
-      rx += (mx - rx) * 0.1;
-      ry += (my - ry) * 0.1;
-      ring.style.left = rx + "px";
-      ring.style.top = ry + "px";
-
-      rafId = requestAnimationFrame(loop);
-    };
-
-    // Hover: clases para agrandar cursor sobre elementos interactivos
     const addHover = () => {
-      dot.classList.add(styles.hovered);
-      ring.classList.add(styles.hovered);
+      dotRef.current?.classList.add(styles.hovered);
+      ringRef.current?.classList.add(styles.hovered);
     };
     const removeHover = () => {
-      dot.classList.remove(styles.hovered);
-      ring.classList.remove(styles.hovered);
+      dotRef.current?.classList.remove(styles.hovered);
+      ringRef.current?.classList.remove(styles.hovered);
     };
 
-    // Seleccionar todos los elementos interactivos
     const interactives = document.querySelectorAll(
       "a, button, [data-cursor-hover]",
     );
@@ -59,10 +34,25 @@ export function Cursor() {
       el.addEventListener("mouseenter", addHover);
       el.addEventListener("mouseleave", removeHover);
     });
-
     document.addEventListener("mousemove", onMove);
+
+    // ── Loop solo anima posición ─────────────────────────────
+    const loop = () => {
+      const dot = dotRef.current;
+      const ring = ringRef.current;
+      if (dot && ring) {
+        dot.style.left = mx + "px";
+        dot.style.top = my + "px";
+        rx += (mx - rx) * 0.1;
+        ry += (my - ry) * 0.1;
+        ring.style.left = rx + "px";
+        ring.style.top = ry + "px";
+      }
+      rafId = requestAnimationFrame(loop);
+    };
     rafId = requestAnimationFrame(loop);
 
+    // ── Cleanup FUERA del loop, en el return del useEffect ──
     return () => {
       document.removeEventListener("mousemove", onMove);
       cancelAnimationFrame(rafId);
