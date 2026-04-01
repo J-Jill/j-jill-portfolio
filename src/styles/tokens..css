@@ -74,6 +74,13 @@ body {
   -webkit-font-smoothing: antialiased; /* fuentes más suaves en Mac */
   cursor: none; /* oculta el cursor nativo — usamos el custom */
 }
+
+/* ── REVEAL ON SCROLL ───────────────────────────────────────────────
+   Clases globales para el efecto de aparición al hacer scroll.
+   El hook useScrollReveal añade la clase 'visible' cuando
+   el elemento entra en el viewport.
+   Son globales porque se usan en múltiples módulos. ──────────────── */
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -86,11 +93,38 @@ body {
   transform: translateY(0);
 }
 .reveal.delay-1 {
-  transition-delay: 0.1s;
+  transition-delay: 0.12s;
 }
 .reveal.delay-2 {
-  transition-delay: 0.22s;
+  transition-delay: 0.24s;
 }
 .reveal.delay-3 {
-  transition-delay: 0.34s;
+  transition-delay: 0.36s;
+}
+
+/* ── SECTION BASE ───────────────────────────────────────────────────
+   Padding y border comunes a todas las secciones.
+   Aplicar a las secciones que necesiten el patrón base. ─────────── */
+
+.section-base {
+  padding: 130px 52px;
+  border-top: 1px solid var(--border);
+}
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--elements);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.section-label::before {
+  content: "—";
+  color: var(--elements);
+  font-family: var(--sans);
+  font-weight: 300;
 }
