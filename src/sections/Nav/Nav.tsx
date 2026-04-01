@@ -17,7 +17,7 @@ export function Nav() {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
       <a href="#" className={styles.name}>
-        J Jillian
+        Jillian
       </a>
 
       <ul className={styles.links} role="list">

@@ -95,3 +95,71 @@
   line-height: 1.85;
   padding-top: 4px;
 }
+
+/* Tablet: 768px */
+@media (max-width: 768px) {
+  /* StandOut.module.css */
+  .grid {
+    grid-template-columns: 1fr;
+  } /* 4 cards en columna */
+
+  /* RightFit.module.css */
+  .row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .row:hover {
+    margin: 0;
+    padding: 36px 0;
+  } /* desactiva el margin negativo en mobile */
+
+  /* Testimonials.module.css */
+  .grid {
+    grid-template-columns: 1fr;
+  } /* 3 cards en columna */
+
+  /* Stack.module.css */
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .layerInfo {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .techs {
+    padding: 16px 0;
+  }
+
+  /* Contact.module.css */
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+/* Mobile: 480px */
+@media (max-width: 480px) {
+  /* Secciones — menos padding en mobile */
+  .section {
+    padding: 80px 24px;
+  }
+
+  /* Nav.module.css */
+  .nav {
+    padding: 20px 24px;
+  }
+  .links {
+    display: none;
+  } /* En mobile puedes ocultar los links del nav */
+
+  /* Hero.module.css */
+  .hero {
+    padding: 0 24px 48px;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}

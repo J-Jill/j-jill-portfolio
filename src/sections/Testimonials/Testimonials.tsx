@@ -1,7 +1,7 @@
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import { useLang } from "../../hooks/useLang";
 import { testimonials } from "../../data/testimonials";
-import styles from "./Testimonials.module.css";
+import styles from "./testimonials.module.css";
 
 // Palabras del marquee — duplicadas para el loop continuo
 const MARQUEE_WORDS = ["What people say", "about me"];
