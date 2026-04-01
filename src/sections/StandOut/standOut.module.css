@@ -1,0 +1,125 @@
+.section {
+  padding: 130px 52px;
+  border-top: 1px solid var(--border);
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--elements);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.label::before {
+  content: "—";
+  font-family: var(--sans);
+  font-weight: 300;
+}
+
+.title {
+  font-size: var(--text-section);
+  font-weight: 800;
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  margin-bottom: 64px;
+}
+.titleEm {
+  font-style: italic;
+  color: var(--secondary);
+}
+
+/* Grid de 2 columnas — 4 cards en 2 filas */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--border); /* el gap entre cards muestra el border */
+}
+
+.card {
+  background: var(--bg3);
+  padding: 48px 48px 52px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    background var(--transition-slow),
+    border-color var(--transition-slow);
+  border: 1px solid transparent;
+}
+.card:hover {
+  border-color: var(--border2);
+  background: var(--bg4);
+}
+
+/*
+  Número decorativo de fondo:
+  - Posición absolute, grande, color casi transparente
+  - Crea profundidad sin añadir ruido visual
+  - pointer-events: none para que no interfiera con hover
+*/
+.bgNum {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  font-size: clamp(100px, 14vw, 180px);
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.04);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  transition: color var(--transition-slow);
+}
+.card:hover .bgNum {
+  color: rgba(255, 255, 255, 0.07);
+}
+
+.num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--elements);
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.cardTitle {
+  font-size: clamp(22px, 2.5vw, 34px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.cardBody {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--secondary);
+  line-height: 1.85;
+}
+
+/*
+  Línea que se expande en hover:
+  - En reposo: 32px, color muted
+  - En hover: 56px, color text
+  - La transición da feedback visual de que la card es interactiva
+*/
+.line {
+  width: 32px;
+  height: 2px;
+  background: var(--elements);
+  margin-top: 32px;
+  transition:
+    width var(--transition-slow),
+    background var(--transition-slow);
+}
+.card:hover .line {
+  width: 56px;
+  background: var(--text);
+}
