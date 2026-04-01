@@ -1,7 +1,7 @@
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import { useLang } from "../../hooks/useLang";
 import { standoutCards } from "../../data/standout";
-import styles from "./standOut.module.css";
+import styles from "./StandOut.module.css";
 
 export function StandOut() {
   const { t } = useLang();

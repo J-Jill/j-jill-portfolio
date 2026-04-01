@@ -1,7 +1,7 @@
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import { useLang } from "../../hooks/useLang";
 import { fitItems } from "../../data/fit";
-import styles from "./rightFit.module.css";
+import styles from "./RightFit.module.css";
 
 export function RightFit() {
   const { t } = useLang();

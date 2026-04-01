@@ -1,6 +1,6 @@
 import { useScrolled } from "../../hooks/useScrolled";
 import { useLang } from "../../hooks/useLang";
-import styles from "./nav.module.css";
+import styles from "./Nav.module.css";
 
 const NAV_LINKS = [
   { href: "#work", en: "Work", es: "Trabajo" },

@@ -1,7 +1,7 @@
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import { useLang } from "../../hooks/useLang";
 import { projects } from "../../data/projects";
-import styles from "./work.module.css";
+import styles from "./Work.module.css";
 import { ProjectCard } from "../../components/ProjectCard/ProjectCard";
 
 export function Work() {

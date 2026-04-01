@@ -1,5 +1,5 @@
 import { useLang } from "../../hooks/useLang";
-import styles from "./hero.module.css";
+import styles from "./Hero.module.css";
 
 export function Hero() {
   const { t } = useLang();

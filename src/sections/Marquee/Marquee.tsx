@@ -1,4 +1,4 @@
-import styles from "./marquee.module.css";
+import styles from "./Marquee.module.css";
 
 const ITEMS = ["Frontend", "React", "UI/UX", "Toronto", "Design", "Code"];
 

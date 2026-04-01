@@ -1,7 +1,7 @@
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import { useLang } from "../../hooks/useLang";
 import { archLayers } from "../../data/stack";
-import styles from "./stack.module.css";
+import styles from "./Stack.module.css";
 
 export function Stack() {
   const { t } = useLang();
