@@ -1,0 +1,35 @@
+.footer {
+  padding: 30px 52px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.left,
+.right {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.link {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--elements);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+.link:hover {
+  color: var(--text);
+}
+
+.copy {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--elements);
+  letter-spacing: 0.05em;
+}
