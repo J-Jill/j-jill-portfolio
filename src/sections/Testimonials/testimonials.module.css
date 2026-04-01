@@ -1,0 +1,117 @@
+/* Marquee a pantalla completa — sin padding lateral */
+.marqueeWrap {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 32px 0;
+  white-space: nowrap;
+}
+
+.marqueeTrack {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+}
+
+/*
+  El marquee alterna dos estilos:
+  .solid: texto blanco normal
+  .outline: texto transparente con stroke — solo el contorno visible
+  
+  La alternancia crea ritmo visual sin añadir color.
+  Es el mismo efecto del marquee principal pero más grande.
+*/
+.marqueeWord {
+  font-size: clamp(64px, 12vw, 160px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  line-height: 1;
+  padding: 0 60px;
+}
+.solid {
+  color: var(--text);
+}
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.33%);
+  }
+  /* -33.33% porque triplicamos las palabras (3 sets) */
+}
+
+/* Grid de 3 columnas para las cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--border);
+}
+
+.card {
+  background: var(--bg3);
+  padding: 44px 40px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: background var(--transition-slow);
+}
+.card:hover {
+  background: var(--bg4);
+}
+
+/*
+  La comilla tipográfica usa “ (") en el HTML.
+  Es el caracter correcto para apertura de cita en inglés.
+  font-family serif para que tenga la forma clásica de comilla.
+  color muy transparente — decorativo, no informativo.
+*/
+.quote {
+  font-family: Georgia, serif;
+  font-size: 80px;
+  line-height: 0.6;
+  color: rgba(255, 255, 255, 0.08);
+  margin-bottom: 24px;
+  display: block;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--secondary);
+  line-height: 1.85;
+  flex: 1;
+  margin-bottom: 36px;
+  font-style: normal; /* blockquote tiene italic por defecto — lo reseteamos */
+}
+
+.author {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+.name {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.role {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--elements);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.source {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--elements);
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
