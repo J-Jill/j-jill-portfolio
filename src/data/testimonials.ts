@@ -5,31 +5,31 @@ export const testimonials: Testimonial[] = [
   {
     id: "1",
     quote: {
-      en: "Jillian has a rare combination of design sensibility and technical precision. She doesn't just implement what's in the spec — she asks why, and the result is always better for it.",
-      es: "Jillian tiene una combinación poco común de sensibilidad de diseño y precisión técnica. No solo implementa lo que está en el spec — pregunta por qué, y el resultado siempre es mejor.",
+      en: "I had the pleasure of working with Jillian when she was an intern at Instructr. During her time with us, Jillian proved to be an outstanding asset to our team. With knowledge spanning our entire tech stack, Jillian's specialization in front-end development truly stood out. Her unique cross-disciplinary skillset as a developer and digital designer enabled her to create beautiful UI optimizations that were both functional and visually appealing. Jillian's passion for learning and her collaborative spirit make her a true team player. She is the kind of person you want to work with every day. I wholeheartedly recommend Jillian to anyone looking for a talented full-stack developer with a keen eye for front-end design.",
+      es: "Tuve el placer de trabajar con Jillian durante su periodo de prácticas en Instructr. Durante su tiempo con nosotros, Jillian demostró ser un activo invaluable para nuestro equipo. Con un conocimiento integral de nuestra pila tecnológica, su especialización en desarrollo front-end se destacó. Su singular combinación de habilidades multidisciplinares, como desarrolladora y diseñadora digital, le permitió crear optimizaciones de interfaz de usuario impecables, funcionales y visualmente atractivas. La pasión de Jillian por aprender y su espíritu colaborativo la convierten en una verdadera jugadora de equipo. Es el tipo de persona con la que uno desea trabajar a diario. Recomiendo encarecidamente a Jillian a cualquiera que busque una desarrolladora full-stack talentosa con un gran talento para el diseño front-end.",
     },
-    name: "Nombre Compañero",
-    role: "Senior Developer · Accenture Spain",
+    name: "Lasse Damsgaard Skaalum ",
+    role: "Senior Developer · Instructr Denmark",
     source: "via LinkedIn",
   },
   {
     id: "2",
     quote: {
-      en: "Working with Jillian meant the UI always came out exactly as designed — and often better. She has an eye for the details that most developers don't even look for.",
-      es: "Trabajar con Jillian significaba que la UI siempre salía exactamente como se diseñó — y a menudo mejor. Tiene ojo para los detalles que la mayoría de developers ni siquiera busca.",
+      en: "Jillian worked as a front-end developer at my software startup Instructr. She worked on several tasks and projects such as implementing new features and making the web app responsive across different devices. From the first day, Jillian took on a massive responsibility, and we were always confident that her work lived up to the highest standards. Additionally, Jillian contributed to an inspiring work culture with a positive attitude and a genuine interest in her colleagues.",
+      es: "Jillian trabajó como desarrolladora front-end en mi startup de software, Instructr. Participó en diversas tareas y proyectos, como la implementación de nuevas funcionalidades y la optimización de la aplicación web para diferentes dispositivos. Desde el primer día, Jillian asumió una gran responsabilidad y siempre confiamos en que su trabajo cumpliera con los más altos estándares. Además, contribuyó a crear un ambiente de trabajo inspirador con una actitud positiva y un interés genuino por sus compañeros.",
     },
-    name: "Nombre Compañero",
-    role: "Tech Lead · Accenture Spain",
+    name: "Anders Juul Larsen ",
+    role: "Senior Developer · Instructr Denmark",
     source: "via LinkedIn",
   },
   {
     id: "3",
     quote: {
-      en: "She picks up new concepts remarkably fast and applies them with care. You give Jillian a challenge and she doesn't just solve it — she comes back with a better version of the question.",
-      es: "Asimila nuevos conceptos a una velocidad notable y los aplica con cuidado. Le das un reto a Jillian y no solo lo resuelve — vuelve con una versión mejor de la pregunta.",
+      en: "A very skillfull, fast learning and curious  developer working always with passion and stability. Always wearing a smile and  is ready to help others in need. Sharp eye for deisgn and details, plus having a 'bag' full of new ideas and solutions.",
+      es: "Una desarrollador muy hábil, con gran capacidad de aprendizaje y mucha curiosidad, que trabaja siempre con pasión y constancia. Siempre sonriente y dispuesto a ayudar a quien lo necesite. Posee un ojo clínico para el diseño y los detalles, además de un sinfín de ideas y soluciones innovadoras.",
     },
-    name: "Nombre Compañero",
-    role: "Project Manager · Accenture Spain",
+    name: "Nikolaos Chanania",
+    role: "Mid Developer · Instructr Denmark",
     source: "via LinkedIn",
   },
 ];
