@@ -15,21 +15,21 @@ export function Footer() {
 
       <div className={styles.right}>
         <a
-          href="https://linkedin.com/in/jillianram"
+          href="https://linkedin.com/in/jillian-ram"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}>
           LinkedIn
         </a>
         <a
-          href="https://github.com/jillianram"
+          href="https://github.com/jillian-ram"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}>
           GitHub
         </a>
-        <a href="mailto:hi@jillianram-dev.com" className={styles.link}>
-          hi@jillianram-dev.com
+        <a href="mailto:jillian@jillianram-dev.com" className={styles.link}>
+          jillian@jillianram-dev.com
         </a>
       </div>
     </footer>
