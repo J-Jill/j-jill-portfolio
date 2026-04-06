@@ -1,4 +1,4 @@
-import type { Project } from "../../types";
+import type { Project } from "@types";
 import styles from "./ProjectCard.module.css";
 
 interface ProjectCardProps {

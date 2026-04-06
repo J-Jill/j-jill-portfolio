@@ -1,6 +1,6 @@
-import { useScrollReveal } from "../../hooks/useScrollReveal";
-import { useLang } from "../../hooks/useLang";
-import { archLayers } from "../../data/stack";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useLang } from "@/hooks/useLang";
+import { archLayers } from "@/data/stack";
 import styles from "./Stack.module.css";
 
 export function Stack() {

@@ -1,5 +1,5 @@
-import { useScrolled } from "../../hooks/useScrolled";
-import { useLang } from "../../hooks/useLang";
+import { useScrolled } from "@/hooks/useScrolled";
+import { useLang } from "@/hooks/useLang";
 import styles from "./Nav.module.css";
 
 const NAV_LINKS = [

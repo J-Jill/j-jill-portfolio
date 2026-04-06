@@ -1,4 +1,4 @@
-import type { ArchLayer } from "../types";
+import type { ArchLayer } from "@types";
 
 export const archLayers: ArchLayer[] = [
   {

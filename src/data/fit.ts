@@ -1,4 +1,4 @@
-import type { FitItem } from "../types";
+import type { FitItem } from "@types";
 
 export const fitItems: FitItem[] = [
   {

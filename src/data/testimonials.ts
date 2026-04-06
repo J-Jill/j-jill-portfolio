@@ -1,4 +1,4 @@
-import type { Testimonial } from "../types";
+import type { Testimonial } from "@types";
 
 // Reemplaza el texto de quote con tus LinkedIn recommendations reales
 export const testimonials: Testimonial[] = [

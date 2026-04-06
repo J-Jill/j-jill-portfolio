@@ -1,8 +1,8 @@
-import { useScrollReveal } from "../../hooks/useScrollReveal";
-import { useLang } from "../../hooks/useLang";
-import { projects } from "../../data/projects";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useLang } from "@/hooks/useLang";
+import { projects } from "@/data/projects";
 import styles from "./Work.module.css";
-import { ProjectCard } from "../../components/ProjectCard/ProjectCard";
+import { ProjectCard } from "@/components/ProjectCard/ProjectCard";
 
 export function Work() {
   const { t } = useLang();

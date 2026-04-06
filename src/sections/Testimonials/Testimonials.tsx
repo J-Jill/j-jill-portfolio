@@ -1,6 +1,6 @@
-import { useScrollReveal } from "../../hooks/useScrollReveal";
-import { useLang } from "../../hooks/useLang";
-import { testimonials } from "../../data/testimonials";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useLang } from "@/hooks/useLang";
+import { testimonials } from "@/data/testimonials";
 import styles from "./Testimonials.module.css";
 
 // Palabras del marquee — duplicadas para el loop continuo

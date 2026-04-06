@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useScrollReveal } from "../../hooks/useScrollReveal";
-import { useLang } from "../../hooks/useLang";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useLang } from "@/hooks/useLang";
 import styles from "./Contact.module.css";
 
 const INTERESTS = [
