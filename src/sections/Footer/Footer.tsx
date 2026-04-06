@@ -22,7 +22,7 @@ export function Footer() {
           LinkedIn
         </a>
         <a
-          href="https://github.com/J-Jill"
+          href="https://github.com/j-jill"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}>
