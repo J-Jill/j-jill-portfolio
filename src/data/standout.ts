@@ -1,4 +1,4 @@
-import type { StandOutCard } from "@types";
+import type { StandOutCard } from "@/types";
 
 export const standoutCards: StandOutCard[] = [
   {
