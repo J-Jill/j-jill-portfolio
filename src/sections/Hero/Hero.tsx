@@ -8,7 +8,7 @@ export function Hero() {
     <section className={styles.hero} id="hero" aria-label="Introduction">
       <div className={styles.spacer} aria-hidden="true" />
 
-      <div className={styles.eyebrow}>
+      {/* <div className={styles.eyebrow}>
         <span className={styles.pulse} aria-hidden="true" />
         <span>
           {t(
@@ -16,7 +16,7 @@ export function Hero() {
             "Desarrolladora Frontend · React · Sensibilidad UI/UX",
           )}
         </span>
-      </div>
+      </div> */}
 
       <h1 className={styles.title}>
         <span className={styles.line1}>Jillian</span>

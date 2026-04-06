@@ -16,9 +16,11 @@ export function Nav() {
 
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
-      <a href="#" className={styles.name}>
-        Jillian
-      </a>
+      <img
+        src="/jillian-ram-favicon.png"
+        alt="Jillian Ram Logo"
+        className={styles.logo}
+      />
 
       <ul className={styles.links} role="list">
         {NAV_LINKS.map((link) => (
