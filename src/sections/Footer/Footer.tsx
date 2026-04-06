@@ -10,7 +10,7 @@ export function Footer() {
         <a href="#hero" className={styles.link}>
           {t("Back to top ↑", "Volver arriba ↑")}
         </a>
-        <span className={styles.copy}>© 2025 Jillian Ram</span>
+        <span className={styles.copy}>© 2026 Jillian Ram</span>
       </div>
 
       <div className={styles.right}>

@@ -13,7 +13,7 @@ export const projects: Project[] = [
     name: "Project One",
     description:
       "Short description of what this app does and the problem it solves",
-    year: 2025,
+    year: 2026,
     tags: ["React", "TypeScript", "React Query", "Vite"],
     url: "https://project-one.vercel.app",
     githubUrl: "https://github.com/jillianram/project-one",

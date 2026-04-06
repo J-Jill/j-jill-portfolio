@@ -39,8 +39,8 @@ export function Hero() {
         <div className={styles.meta}>
           <p className={styles.location}>
             {t(
-              "Málaga, Spain / Toronto from May 2025",
-              "Málaga, España / Toronto desde Mayo 2025",
+              "Málaga, Spain / Toronto from May 2026",
+              "Málaga, España / Toronto desde Mayo 2026",
             )}
           </p>
           <div className={styles.stack}>
