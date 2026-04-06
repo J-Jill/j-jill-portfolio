@@ -35,11 +35,19 @@ export function Contact() {
     );
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // En producción: enviar a un endpoint (Formspree, Resend, etc.)
-    // Por ahora: simulamos el envío
-    console.log("Form submitted:", { ...fields, interests });
+
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...fields, interests }),
+      });
+    } catch (error) {
+      console.error("Error sending message:", error);
+    }
+
     setSent(true);
     setTimeout(() => setSent(false), 4000);
   };
