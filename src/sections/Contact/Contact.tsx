@@ -39,19 +39,22 @@ export function Contact() {
     e.preventDefault();
 
     try {
-      await fetch("/api/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...fields, interests }),
       });
-      setFields({ name: "", email: "", message: "" });
-      setInterests([]);
+
+      if (res.ok) {
+        // Solo limpia y muestra éxito si el servidor respondió bien
+        setFields({ name: "", email: "", message: "" });
+        setInterests([]);
+        setSent(true);
+        setTimeout(() => setSent(false), 4000);
+      }
     } catch (error) {
       console.error("Error sending message:", error);
     }
-
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
   };
 
   return (
