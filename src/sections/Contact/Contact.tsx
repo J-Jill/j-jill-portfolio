@@ -44,6 +44,8 @@ export function Contact() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...fields, interests }),
       });
+      setFields({ name: "", email: "", message: "" });
+      setInterests([]);
     } catch (error) {
       console.error("Error sending message:", error);
     }
