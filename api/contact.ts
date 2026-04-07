@@ -1,6 +1,8 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const config = {
+  runtime: "edge",
+};
 
 export default async function handler(req: Request) {
   if (req.method !== "POST") {
@@ -10,7 +12,9 @@ export default async function handler(req: Request) {
   try {
     const { name, email, message, interests } = await req.json();
 
-    const result = await resend.emails.send({
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    const { data, error } = await resend.emails.send({
       from: "portfolio@jillianram-dev.com",
       to: "jillian@jillianram-dev.com",
       subject: `Portfolio contact — ${name}`,
@@ -21,9 +25,12 @@ export default async function handler(req: Request) {
       `,
     });
 
-    return new Response(JSON.stringify({ ok: true, result }), { status: 200 });
+    if (error) {
+      return new Response(JSON.stringify({ error }), { status: 500 });
+    }
+
+    return new Response(JSON.stringify({ ok: true, data }), { status: 200 });
   } catch (error) {
-    console.error("Resend error:", error);
     return new Response(JSON.stringify({ error: String(error) }), {
       status: 500,
     });
