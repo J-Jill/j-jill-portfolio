@@ -7,18 +7,25 @@ export default async function handler(req: Request) {
     return new Response("Method not allowed", { status: 405 });
   }
 
-  const { name, email, message, interests } = await req.json();
+  try {
+    const { name, email, message, interests } = await req.json();
 
-  await resend.emails.send({
-    from: "portfolio@jillianram-dev.com",
-    to: "jillian@jillianram-dev.com",
-    subject: `Portfolio contact — ${name}`,
-    html: `
-      <p><strong>From:</strong> ${name} (${email})</p>
-      <p><strong>Looking for:</strong> ${interests?.join(", ")}</p>
-      <p><strong>Message:</strong> ${message}</p>
-    `,
-  });
+    const result = await resend.emails.send({
+      from: "portfolio@jillianram-dev.com",
+      to: "jillian@jillianram-dev.com",
+      subject: `Portfolio contact — ${name}`,
+      html: `
+        <p><strong>From:</strong> ${name} (${email})</p>
+        <p><strong>Looking for:</strong> ${interests?.join(", ")}</p>
+        <p><strong>Message:</strong> ${message}</p>
+      `,
+    });
 
-  return new Response(JSON.stringify({ ok: true }), { status: 200 });
+    return new Response(JSON.stringify({ ok: true, result }), { status: 200 });
+  } catch (error) {
+    console.error("Resend error:", error);
+    return new Response(JSON.stringify({ error: String(error) }), {
+      status: 500,
+    });
+  }
 }
