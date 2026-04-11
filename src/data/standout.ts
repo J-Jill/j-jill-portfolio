@@ -17,18 +17,6 @@ export const standoutCards: StandOutCard[] = [
     id: "2",
     num: "02",
     title: {
-      en: "Obsessive about detail",
-      es: "Obsesionada con el detalle",
-    },
-    body: {
-      en: "I notice the things nobody asked me to notice — the 4px misalignment, the transition that feels off, the hover state that breaks the pattern. That obsession is what separates interfaces that work from interfaces that feel right.",
-      es: "Noto las cosas que nadie me pide que note — el desalineamiento de 4px, la transición que no cuadra, el hover state que rompe el patrón. Esa obsesión es lo que separa interfaces que funcionan de interfaces que se sienten bien.",
-    },
-  },
-  {
-    id: "3",
-    num: "03",
-    title: {
       en: "I adapted once, I'll do it again",
       es: "Me adapté una vez, lo haré de nuevo",
     },
@@ -38,6 +26,19 @@ export const standoutCards: StandOutCard[] = [
     },
   },
   {
+    id: "3",
+    num: "03",
+    title: {
+      en: "Obsessive about detail",
+      es: "Obsesionada con el detalle",
+    },
+    body: {
+      en: "I notice the things nobody asked me to notice — the 4px misalignment, the transition that feels off, the hover state that breaks the pattern. That obsession is what separates interfaces that work from interfaces that feel right.",
+      es: "Noto las cosas que nadie me pide que note — el desalineamiento de 4px, la transición que no cuadra, el hover state que rompe el patrón. Esa obsesión es lo que separa interfaces que funcionan de interfaces que se sienten bien.",
+    },
+  },
+
+  {
     id: "4",
     num: "04",
     title: {
@@ -45,8 +46,8 @@ export const standoutCards: StandOutCard[] = [
       es: "Hablo diseño y código",
     },
     body: {
-      en: "My design background means I'm the bridge between Figma and the browser — I understand why a designer made a choice, and I know how to translate it faithfully into code without losing the intent.",
-      es: "Mi background en diseño me convierte en el puente entre Figma y el navegador — entiendo por qué el diseñador tomó una decisión, y sé cómo traducirla fielmente a código sin perder la intención.",
+      en: "My design background gives me an edge most developers don't have — I understand why a designer made a choice, and I know how to push back when it doesn't translate well to code.",
+      es: "Mi experiencia en diseño me da una ventaja que la mayoría de los desarrolladores no tienen — entiendo por qué un diseñador hizo una elección, y sé cómo argumentar cuando no se traduce bien al código.",
     },
   },
 ];

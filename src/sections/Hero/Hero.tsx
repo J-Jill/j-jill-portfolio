@@ -8,15 +8,15 @@ export function Hero() {
     <section className={styles.hero} id="hero" aria-label="Introduction">
       <div className={styles.spacer} aria-hidden="true" />
 
-      {/* <div className={styles.eyebrow}>
+      <div className={styles.eyebrow}>
         <span className={styles.pulse} aria-hidden="true" />
         <span>
           {t(
-            "Frontend Developer · React · UI/UX Sensibility",
-            "Desarrolladora Frontend · React · Sensibilidad UI/UX",
+            "Frontend Developer · React & TypeScript · AI-powered interfaces",
+            "Desarrolladora Frontend · React & TypeScript · Interfaces impulsadas por IA",
           )}
         </span>
-      </div> */}
+      </div>
 
       <h1 className={styles.title}>
         <span className={styles.line1}>Jillian</span>
@@ -31,8 +31,8 @@ export function Hero() {
             {t("interfaces that think", "interfaces que piensan")}
           </strong>
           {t(
-            " — combining React, clean architecture and design sensibility to craft experiences that work as well as they look.",
-            " — combinando React, arquitectura limpia y sensibilidad de diseño para crear experiencias que funcionan tan bien como se ven.",
+            " — shipping production-grade React and TypeScript at Accenture for 3+ years, with the design sensibility to make them work as well as they look.",
+            " — Llevo más de 3 años implementando React y TypeScript de nivel profesional en Accenture, con la sensibilidad de diseño necesaria para que funcionen tan bien como se ven.",
           )}
         </p>
 
