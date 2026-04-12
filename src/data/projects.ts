@@ -21,12 +21,20 @@ export const projects: Project[] = [
   },
   {
     id: "02",
-    name: "Project Two",
-    description: "Another project description",
-    year: 2024,
-    tags: ["React", "Context API", "CSS Modules"],
-    url: "https://project-two.vercel.app",
-    githubUrl: "https://github.com/jillianram/project-two",
+    name: "WildSphere",
+    description:
+      "Interactive 3D globe that visualizes real-time wildlife observations worldwide. Click any hotspot to explore species photos, taxonomy, and location data sourced live from the iNaturalist API.",
+    year: 2025,
+    tags: [
+      "React",
+      "TypeScript",
+      "Three.js",
+      "TanStack Query",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+    url: "https://wildsphere.netlify.app",
+    githubUrl: "https://github.com/J-Jill/wildsphere",
   },
   {
     id: "03",
