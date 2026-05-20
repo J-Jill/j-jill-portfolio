@@ -1,6 +1,6 @@
 # Jillian Ramirez — Portfolio
 
-> Frontend Developer portfolio built with React, TypeScript and Vite. Deployed at [jillianram-dev.com](https://jillianram-dev.com)
+> Frontend Engineer portfolio built with React, TypeScript and Vite. Deployed at [jillianram-dev.com](https://jillianram-dev.com)
 
 ---
 
@@ -210,5 +210,5 @@ They never change for the same reason. That's the single responsibility principl
 
 ## Author
 
-**Jillian Ramirez** — Frontend Developer  
+**Jillian Ramirez** — Software Engineer  
 [jillianram-dev.com](https://jillianram-dev.com) · [LinkedIn](https://linkedin.com/in/jillian-ram) · [GitHub](https://github.com/J-Jill)
