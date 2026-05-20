@@ -7,6 +7,7 @@ export interface Project {
   url?: string;
   githubUrl?: string;
   featured?: boolean;
+  image?: string;
 }
 
 export interface Testimonial {

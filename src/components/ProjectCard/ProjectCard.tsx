@@ -6,7 +6,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const { name, description, year, tags, url, githubUrl, featured, id } =
+  const { name, description, year, tags, url, githubUrl, featured, id, image } =
     project;
 
   const href = url ?? githubUrl ?? "#";
@@ -19,8 +19,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
       rel="noopener noreferrer"
       className={`${styles.card} ${featured ? styles.featured : ""}`}
       aria-label={`${name} — ${description}`}>
-      <div className={styles.bg} aria-hidden="true">
-        <span className={styles.bgNum}>{id}</span>
+      <div
+        className={styles.bg}
+        aria-hidden="true"
+        style={image ? { backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center" } : undefined}>
+        {!image && <span className={styles.bgNum}>{id}</span>}
       </div>
 
       <div className={styles.overlay} aria-hidden="true" />

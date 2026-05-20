@@ -1,4 +1,6 @@
 import type { Project } from "@/types";
+import wildSphereImg from "@/assets/wildsphere.webp";
+import memoryGameImg from "@/assets/memorygame.webp";
 
 /*
   Los proyectos como constante tipada.
@@ -35,14 +37,17 @@ export const projects: Project[] = [
     ],
     url: "https://wildsphere.netlify.app",
     githubUrl: "https://github.com/J-Jill/wildsphere",
+    image: wildSphereImg,
   },
   {
     id: "03",
-    name: "Project Three",
-    description: "Third project description",
-    year: 2024,
-    tags: ["JavaScript", "REST API", "Figma"],
-    githubUrl: "https://github.com/jillianram/project-three",
-    // Sin url — este proyecto no tiene demo pública
+    name: "Memory Game",
+    description:
+      "First project built during Ironhack bootcamp — a memory card game inspired by the Dumb Ways to Die campaign. 100% vanilla JavaScript, with every card illustration hand-drawn in Adobe Illustrator.",
+    year: 2022,
+    tags: ["JavaScript", "HTML", "CSS", "Adobe Illustrator"],
+    url: "https://j-jillian.github.io/Memory-game/",
+    githubUrl: "https://github.com/J-Jillian/Memory-game",
+    image: memoryGameImg,
   },
 ];
