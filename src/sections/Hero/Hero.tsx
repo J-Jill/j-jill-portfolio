@@ -12,8 +12,8 @@ export function Hero() {
         <span className={styles.pulse} aria-hidden="true" />
         <span>
           {t(
-            "Frontend Engineer · React & TypeScript · AI-powered interfaces",
-            "Ingeniera Frontend · React & TypeScript · Interfaces impulsadas por IA",
+            "Software Engineer · React & TypeScript · AI-powered interfaces",
+            "Ingeniera de Software · React & TypeScript · Interfaces impulsadas por IA",
           )}
         </span>
       </div>

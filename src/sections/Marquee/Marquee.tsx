@@ -1,6 +1,6 @@
 import styles from "./Marquee.module.css";
 
-const ITEMS = ["Frontend", "React", "TypeScript", "Toronto", "AI", "Code"];
+const ITEMS = ["Fullstack", "React", "TypeScript", "Toronto", "AI", "Code"];
 
 export function Marquee() {
   /*
