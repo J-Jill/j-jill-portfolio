@@ -30,22 +30,32 @@ export function Nav() {
         ))}
       </ul>
 
-      <div
-        className={styles.langSwitch}
-        role="group"
-        aria-label="Language switcher">
-        {(["en", "es"] as const).map((l, i) => (
-          <>
-            {i > 0 && <span aria-hidden="true">/</span>}
-            <button
-              key={l}
-              className={lang === l ? styles.langActive : styles.langBtn}
-              onClick={() => setLang(l)}
-              aria-pressed={lang === l}>
-              {l.toUpperCase()}
-            </button>
-          </>
-        ))}
+      <div className={styles.rightGroup}>
+        <div
+          className={styles.langSwitch}
+          role="group"
+          aria-label="Language switcher">
+          {(["en", "es"] as const).map((l, i) => (
+            <>
+              {i > 0 && <span aria-hidden="true">/</span>}
+              <button
+                key={l}
+                className={lang === l ? styles.langActive : styles.langBtn}
+                onClick={() => setLang(l)}
+                aria-pressed={lang === l}>
+                {l.toUpperCase()}
+              </button>
+            </>
+          ))}
+        </div>
+
+        <a
+          href="/Jillian_Ram_CV.pdf"
+          download
+          className={styles.cvBtn}
+          aria-label="Download CV">
+          {t("↓ CV", "↓ CV")}
+        </a>
       </div>
     </nav>
   );
