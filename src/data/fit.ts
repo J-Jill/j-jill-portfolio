@@ -42,7 +42,7 @@ export const fitItems: FitItem[] = [
       es: "Espacio para crecer",
     },
     description: {
-      en: "I'm not looking for a company that needs a finished product. I'm looking for one that values someone who is actively building toward senior — methodically, with intention, and fast.",
+      en: "I'm not looking for a company that needs a finished product. I'm looking for one that values someone who is actively building toward senior — methodically, intentionally, and fast.",
       es: "No busco una empresa que necesite un producto terminado. Busco una que valore a alguien que está construyendo activamente hacia senior — de forma metódica, con intención y rápido.",
     },
   },

@@ -31,7 +31,7 @@ export function Hero() {
             {t("interfaces that think", "interfaces que piensan")}
           </strong>
           {t(
-            " — shipping production-grade React and TypeScript at Accenture for 3+ years, with the design sensibility to make them work as well as they look.",
+            " — shipping production-grade React and TypeScript at Accenture for 3+ years, with the design sensibility to make them look as good as they work.",
             " — Llevo más de 3 años implementando React y TypeScript de nivel profesional en Accenture, con la sensibilidad de diseño necesaria para que funcionen tan bien como se ven.",
           )}
         </p>

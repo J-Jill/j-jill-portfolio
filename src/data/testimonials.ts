@@ -26,7 +26,7 @@ export const testimonials: Testimonial[] = [
     id: "3",
     quote: {
       en: "A very skillfull, fast learning and curious  developer working always with passion and stability. Always wearing a smile and  is ready to help others in need. Sharp eye for deisgn and details, plus having a 'bag' full of new ideas and solutions.",
-      es: "Una desarrollador muy hábil, con gran capacidad de aprendizaje y mucha curiosidad, que trabaja siempre con pasión y constancia. Siempre sonriente y dispuesto a ayudar a quien lo necesite. Posee un ojo clínico para el diseño y los detalles, además de un sinfín de ideas y soluciones innovadoras.",
+      es: "Una desarrolladora muy hábil, con gran capacidad de aprendizaje y mucha curiosidad, que trabaja siempre con pasión y constancia. Siempre sonriente y dispuesto a ayudar a quien lo necesite. Posee un ojo clínico para el diseño y los detalles, además de un sinfín de ideas y soluciones innovadoras.",
     },
     name: "Nikolaos Chanania",
     role: "Mid Developer · Instructr Denmark",
