@@ -50,7 +50,7 @@ export function Nav() {
         </div>
 
         <a
-          href="/Jillian_Ram_CV.pdf"
+          href="/Jillian_CV.pdf"
           download
           className={styles.cvBtn}
           aria-label="Download CV">
