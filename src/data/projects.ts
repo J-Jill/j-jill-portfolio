@@ -1,4 +1,5 @@
 import type { Project } from "@/types";
+import distillImg from "@/assets/distill.webp";
 import wildSphereImg from "@/assets/wildsphere.webp";
 import memoryGameImg from "@/assets/memorygame.webp";
 
@@ -12,14 +13,15 @@ import memoryGameImg from "@/assets/memorygame.webp";
 export const projects: Project[] = [
   {
     id: "01",
-    name: "Project One",
+    name: "Distill",
     description:
-      "Short description of what this app does and the problem it solves",
+      "Upload any technical documentation. Ask in plain English — get instant, source-grounded answers. Built on RAG: the LLM can only answer from your documents, so it can't hallucinate.",
     year: 2026,
-    tags: ["React", "TypeScript", "React Query", "Vite"],
-    url: "https://project-one.vercel.app",
-    githubUrl: "https://github.com/jillianram/project-one",
-    featured: true, // ocupa todo el ancho en el grid
+    tags: ["React", "TypeScript", "Python", "FastAPI", "LangChain", "Groq"],
+    url: "https://trydistill.vercel.app/",
+    githubUrl: "https://github.com/J-Jill/distill",
+    featured: true,
+    image: distillImg,
   },
   {
     id: "02",
