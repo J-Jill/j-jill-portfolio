@@ -121,3 +121,67 @@
   opacity: 1;
   transform: scale(1) rotate(0deg);
 }
+
+/* Hidden / teaser card */
+.card.hidden {
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.hiddenCenter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  padding: 24px;
+  z-index: 1;
+}
+
+.hiddenLabel {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--secondary);
+  opacity: 0.5;
+}
+
+.hiddenHint {
+  font-size: var(--text-body);
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.hiddenCta {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--secondary);
+  letter-spacing: 0.05em;
+  transition: opacity 0.3s;
+}
+
+.card.hidden:hover .hiddenCta {
+  opacity: 0.7;
+}
+
+/* Coming soon card */
+.card.comingSoon {
+  cursor: default;
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 4px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  color: var(--secondary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

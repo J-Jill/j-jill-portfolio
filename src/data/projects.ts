@@ -43,13 +43,22 @@ export const projects: Project[] = [
   },
   {
     id: "03",
-    name: "Memory Game",
+    name: "Observability Dashboard",
     description:
-      "First project built during Ironhack bootcamp — a memory card game inspired by the Dumb Ways to Die campaign. 100% vanilla JavaScript, with every card illustration hand-drawn in Adobe Illustrator.",
-    year: 2022,
-    tags: ["JavaScript", "HTML", "CSS", "Adobe Illustrator"],
-    url: "https://j-jillian.github.io/Memory-game/",
-    githubUrl: "https://github.com/J-Jillian/Memory-game",
-    image: memoryGameImg,
+      "Dashboard to monitor system health: logs, metrics, and traces in one place. Real-time alerting and configurable panels for on-call visibility.",
+    year: 2026,
+    tags: ["React", "TypeScript", "D3.js", "WebSockets"],
+    comingSoon: true,
   },
+  // {
+  //   id: "??",
+  //   name: "Memory Game",
+  //   description:
+  //     "First project built during Ironhack bootcamp — a memory card game inspired by the Dumb Ways to Die campaign. 100% vanilla JavaScript, with every card illustration hand-drawn in Adobe Illustrator.",
+  //   year: 2022,
+  //   tags: ["JavaScript", "HTML", "CSS", "Adobe Illustrator"],
+  //   url: "https://j-jillian.github.io/Memory-game/",
+  //   githubUrl: "https://github.com/J-Jillian/Memory-game",
+  //   image: memoryGameImg,
+  // },
 ];
