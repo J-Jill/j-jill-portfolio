@@ -8,6 +8,7 @@ export interface Project {
   githubUrl?: string;
   featured?: boolean;
   image?: string;
+  hidden?: boolean;
   comingSoon?: boolean;
 }
 

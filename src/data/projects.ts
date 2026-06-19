@@ -1,7 +1,7 @@
 import type { Project } from "@/types";
 import distillImg from "@/assets/distill.webp";
 import wildSphereImg from "@/assets/wildsphere.webp";
-import memoryGameImg from "@/assets/memorygame.webp";
+// memoryGameImg removed because the Memory Game project is commented out below
 
 /*
   Los proyectos como constante tipada.

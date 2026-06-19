@@ -16,8 +16,33 @@ export function ProjectCard({ project }: ProjectCardProps) {
     featured,
     id,
     image,
+    hidden,
     comingSoon,
   } = project;
+
+  if (hidden) {
+    const gameUrl = url ?? githubUrl ?? "#";
+    return (
+      <a
+        href={gameUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${styles.card} ${styles.hidden}`}
+        aria-label="Mystery project — play the memory game to find out">
+        <div className={styles.bg} aria-hidden="true">
+          <span className={styles.bgNum}>{id}</span>
+        </div>
+        <div className={styles.overlay} aria-hidden="true" />
+        <div className={styles.hiddenCenter}>
+          <p className={styles.hiddenLabel}>[ CLASSIFIED ]</p>
+          <p className={styles.hiddenHint}>
+            This one is hiding. Want to find it?
+          </p>
+          <p className={styles.hiddenCta}>Play the memory game →</p>
+        </div>
+      </a>
+    );
+  }
 
   if (comingSoon) {
     return (
