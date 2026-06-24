@@ -12,16 +12,16 @@ export function Hero() {
         <span className={styles.pulse} aria-hidden="true" />
         <span>
           {t(
-            "Software Engineer · React & TypeScript · AI-powered interfaces",
-            "Ingeniera de Software · React & TypeScript · Interfaces impulsadas por IA",
+            "Full Stack Developer · React & TypeScript · AI-powered interfaces",
+            "Desarrolladora Full Stack · React & TypeScript · Interfaces impulsadas por IA",
           )}
         </span>
       </div>
 
       <h1 className={styles.title}>
         <span className={styles.line1}>Jillian</span>
-        <span className={styles.line2}>Software</span>
-        <span className={styles.line3}>Engineer</span>
+        <span className={styles.line2}>Full Stack</span>
+        <span className={styles.line3}>Developer</span>
       </h1>
 
       <div className={styles.footer}>
