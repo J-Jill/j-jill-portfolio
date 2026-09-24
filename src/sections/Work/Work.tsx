@@ -2,12 +2,11 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useLang } from "@/hooks/useLang";
 import { projects } from "@/data/projects";
 import styles from "./Work.module.css";
-import { ProjectCard } from "@/components/ProjectCard/ProjectCard";
+import { ProjectSlide } from "@/components/ProjectSlide/ProjectSlide";
 
 export function Work() {
   const { t } = useLang();
   const headerRef = useScrollReveal<HTMLDivElement>();
-  const gridRef = useScrollReveal<HTMLDivElement>();
 
   return (
     <section id="work" className={styles.section}>
@@ -19,9 +18,13 @@ export function Work() {
         </span>
       </div>
 
-      <div ref={gridRef} className={`${styles.grid} reveal delay-1`}>
+      <div className={styles.list}>
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectSlide
+            key={project.id}
+            project={project}
+            total={projects.length}
+          />
         ))}
       </div>
     </section>

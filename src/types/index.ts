@@ -1,13 +1,20 @@
+export interface ProjectMedia {
+  type: "image" | "video";
+  src: string;
+  alt: { en: string; es: string };
+  poster?: string; // solo vídeo: imagen mientras carga
+}
+
 export interface Project {
   id: string;
   name: string;
-  description: string;
+  tagline: { en: string; es: string };
+  description: { en: string; es: string };
   year: number;
   tags: string[];
   url?: string;
   githubUrl?: string;
-  featured?: boolean;
-  image?: string;
+  media: ProjectMedia[];
   hidden?: boolean;
   comingSoon?: boolean;
 }

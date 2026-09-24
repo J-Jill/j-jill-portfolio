@@ -5,7 +5,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
   gap: 40px;
 }
 
@@ -26,8 +26,27 @@
   padding-bottom: 14px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
+.list {
+  border-bottom: 1px solid var(--border);
+}
+
+/* Tablet: 768px */
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 32px 100px;
+  }
+  .header {
+    margin-bottom: 40px;
+  }
+}
+
+/* Mobile: 480px */
+@media (max-width: 480px) {
+  .section {
+    padding: 80px 24px;
+  }
+  .header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
 }
