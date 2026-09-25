@@ -20,10 +20,10 @@ export function App() {
         <Hero />
         <Marquee />
         <Work />
+        <Stack />
         <StandOut />
         <RightFit />
         <Testimonials />
-        <Stack />
         <Contact />
       </main>
       <Footer />

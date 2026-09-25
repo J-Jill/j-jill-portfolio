@@ -29,7 +29,7 @@ import {
   Tecnologías agrupadas por categoría.
   Los logos vienen de simple-icons (se importan uno a uno, solo entra
   en el bundle lo que usas). Las marcas que simple-icons no incluye
-  (AWS, Adobe, Groq) van sin `icon` y se muestran con sus iniciales.
+  (AWS, Adobe) van sin `icon` y se muestran con sus iniciales.
 
   Para añadir una: busca su nombre en https://simpleicons.org,
   impórtala aquí como si<Nombre> y añádela al grupo.
@@ -71,7 +71,6 @@ export const skillGroups: SkillGroup[] = [
       { name: "DynamoDB" },
       { name: "Cognito" },
       { name: "LangChain", icon: siLangchain },
-      { name: "Groq" },
     ],
   },
   {

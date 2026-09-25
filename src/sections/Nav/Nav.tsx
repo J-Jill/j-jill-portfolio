@@ -4,8 +4,8 @@ import styles from "./Nav.module.css";
 
 const NAV_LINKS = [
   { href: "#work", en: "Work", es: "Trabajo" },
+  { href: "#skills", en: "Skills", es: "Skills" },
   { href: "#about", en: "About", es: "Sobre mí" },
-  { href: "#skills", en: "Stack", es: "Stack" },
   { href: "#contact", en: "Contact", es: "Contacto" },
 ];
 // Los links como constante fuera del componente — no se recrean en cada render

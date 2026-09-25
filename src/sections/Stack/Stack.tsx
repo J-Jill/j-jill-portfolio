@@ -58,7 +58,7 @@ export function Stack() {
       <p className={styles.label}>Stack</p>
 
       <div ref={titleRef} className="reveal">
-        <h2 className={styles.title}>Skills</h2>
+        <h2 className={styles.title}>Technical Skills</h2>
       </div>
 
       <div ref={tableRef} className={`${styles.table} reveal delay-1`}>
