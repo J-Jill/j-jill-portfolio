@@ -78,7 +78,7 @@ export function MediaCarousel({ media, label }: MediaCarouselProps) {
             aria-label={`${i + 1} / ${media.length}`}>
             {item.type === "video" ? (
               <video
-                className={`${styles.media} ${item.fit === "contain" ? styles.contain : ""}`}
+                className={`${styles.media} ${item.fit === "cover" ? styles.cover : ""}`}
                 src={item.src}
                 poster={item.poster}
                 aria-label={item.alt[lang]}
@@ -89,7 +89,7 @@ export function MediaCarousel({ media, label }: MediaCarouselProps) {
               />
             ) : (
               <img
-                className={`${styles.media} ${item.fit === "contain" ? styles.contain : ""}`}
+                className={`${styles.media} ${item.fit === "cover" ? styles.cover : ""}`}
                 src={item.src}
                 alt={item.alt[lang]}
                 loading="lazy"

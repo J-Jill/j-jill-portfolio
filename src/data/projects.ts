@@ -129,7 +129,6 @@ export const projects: Project[] = [
       {
         type: "image",
         src: retailStoreArchitecture,
-        fit: "contain",
         alt: {
           en: "RetailStore architecture: GitHub and Amplify Hosting CI/CD, CloudFront, Cognito auth, Next.js app, AppSync GraphQL and DynamoDB",
           es: "Arquitectura de RetailStore: CI/CD con GitHub y Amplify Hosting, CloudFront, autenticación con Cognito, app Next.js, AppSync GraphQL y DynamoDB",

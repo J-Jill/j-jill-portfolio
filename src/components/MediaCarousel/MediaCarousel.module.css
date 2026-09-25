@@ -23,17 +23,17 @@
 .slide {
   flex: 0 0 100%;
   scroll-snap-align: start;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9; /* formato de las grabaciones de pantalla */
 }
 
 .media {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* nunca recortar capturas ni vídeos */
 }
-.contain {
-  object-fit: contain;
+.cover {
+  object-fit: cover;
 }
 
 .controls {
@@ -99,10 +99,4 @@
 .arrow:focus-visible {
   outline: 2px solid var(--secondary);
   outline-offset: 3px;
-}
-
-@media (max-width: 480px) {
-  .slide {
-    aspect-ratio: 4/3;
-  }
 }
