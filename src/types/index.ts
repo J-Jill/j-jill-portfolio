@@ -1,3 +1,5 @@
+import type { SimpleIcon } from "simple-icons";
+
 export interface ProjectMedia {
   type: "image" | "video";
   src: string;
@@ -28,17 +30,15 @@ export interface Testimonial {
   source: string;
 }
 
-export interface ArchLayer {
+export interface SkillGroup {
   id: string;
   label: { en: string; es: string };
-  description: { en: string; es: string };
-  techs: ArchTech[];
-  isLearning?: boolean;
+  skills: Skill[];
 }
 
-export interface ArchTech {
+export interface Skill {
   name: string;
-  tooltip: string;
+  icon?: SimpleIcon; // sin icon: se muestran las iniciales
 }
 
 export interface StandOutCard {

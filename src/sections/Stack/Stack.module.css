@@ -35,190 +35,130 @@
 }
 
 /*
-  Cada fila es un grid de 2 columnas:
-  - 200px para el nombre de la capa (columna fija)
-  - 1fr para las pills de tecnología (ocupa el resto)
-  
-  El border-right en layerInfo crea la línea divisoria vertical.
+  Cada fila: categoría a la izquierda (columna fija),
+  grid de logos a la derecha.
 */
 .row {
   display: grid;
   grid-template-columns: 200px 1fr;
   border-bottom: 1px solid var(--border);
-  transition: background var(--transition-fast);
 }
 .row:first-child {
   border-top: 1px solid var(--border);
 }
-.row:hover {
-  background: var(--bg3);
-}
 
-.layerInfo {
-  padding: 28px 32px 28px 0;
+.groupLabel {
+  padding: 32px 32px 32px 0;
   border-right: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-}
-.layerLabel {
   font-family: var(--mono);
   font-size: 10px;
+  font-weight: 400;
   color: var(--elements);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-}
-.layerDesc {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--elements);
-  opacity: 0.5;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-.techs {
-  padding: 24px 0 24px 40px;
+.skills {
+  list-style: none;
+  padding: 24px 0 24px 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+  gap: 8px;
+}
+
+.skill {
+  --brand: var(--text);
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-direction: column;
   align-items: center;
-}
-
-/*
-  Tooltip CSS puro con data-tooltip y ::after.
-  
-  Cómo funciona:
-  1. El span tiene el atributo data-tooltip="texto del tooltip"
-  2. ::after usa attr(data-tooltip) para leer ese texto
-  3. En hover, el ::after se hace visible con opacity 1
-  
-  Ventaja vs JavaScript: cero JS, cero event listeners.
-  Limitación: no soporta HTML en el tooltip (solo texto plano).
-  Para este caso, es suficiente y más performante.
-*/
-.tech {
-  position: relative;
-  font-family: var(--sans);
-  font-size: 15px;
-  font-weight: 400;
-  color: var(--secondary);
-  padding: 8px 20px;
-  border: 1px solid var(--border2);
-  border-radius: 100px;
-  cursor: default;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px 8px 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  text-align: center;
   transition:
-    color var(--transition-fast),
     border-color var(--transition-fast),
     background var(--transition-fast);
-  white-space: nowrap;
 }
-.tech:hover {
-  color: var(--text);
-  border-color: rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.04);
-}
-
-/* Tooltip pseudo-elemento */
-.tech::after {
-  content: attr(data-tooltip); /* lee el atributo data-tooltip del HTML */
-  position: absolute;
-  bottom: calc(100% + 10px);
-  left: 50%;
-  transform: translateX(-50%);
+.skill:hover {
+  border-color: var(--border2);
   background: var(--bg3);
-  border: 1px solid var(--border2);
-  color: var(--secondary);
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.05em;
-  padding: 6px 12px;
-  white-space: nowrap;
-  border-radius: 4px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity var(--transition-fast);
-  z-index: 10;
-}
-.tech:hover::after {
-  opacity: 1;
 }
 
-/* Fila "Learning now" — estilo diferente para indicar WIP */
-.learningRow .tech {
-  color: var(--elements);
-  border-style: dashed;
-  font-style: italic;
+.logo {
+  width: 32px;
+  height: 32px;
+  fill: var(--secondary);
+  transition:
+    fill var(--transition-med),
+    transform var(--transition-slow);
 }
-.learningRow .tech:hover {
+.skill:hover .logo {
+  fill: var(--brand);
+  transform: translateY(-2px);
+}
+
+/* Marcas sin logo en simple-icons: iniciales con el mismo peso visual */
+.monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--secondary);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
   color: var(--secondary);
-  border-style: solid;
+  transition:
+    color var(--transition-med),
+    border-color var(--transition-med),
+    transform var(--transition-slow);
+}
+.skill:hover .monogram {
+  color: var(--text);
+  border-color: var(--text);
+  transform: translateY(-2px);
+}
+
+.name {
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--secondary);
+  transition: color var(--transition-fast);
+}
+.skill:hover .name {
+  color: var(--text);
 }
 
 /* Tablet: 768px */
 @media (max-width: 768px) {
-  /* StandOut.module.css */
-  .grid {
-    grid-template-columns: 1fr;
-  } /* 4 cards en columna */
-
-  /* RightFit.module.css */
-  .row {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .row:hover {
-    margin: 0;
-    padding: 36px 0;
-  } /* desactiva el margin negativo en mobile */
-
-  /* Testimonials.module.css */
-  .grid {
-    grid-template-columns: 1fr;
-  } /* 3 cards en columna */
-
-  /* Stack.module.css */
   .row {
     grid-template-columns: 1fr;
   }
-  .layerInfo {
+  .groupLabel {
     border-right: none;
-    border-bottom: 1px solid var(--border);
-    padding: 20px 0;
+    padding: 24px 0 0;
   }
-  .techs {
-    padding: 16px 0;
-  }
-
-  /* Contact.module.css */
-  .row {
-    grid-template-columns: 1fr;
-    gap: 0;
+  .skills {
+    padding: 16px 0 24px;
+    grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
   }
 }
 
 /* Mobile: 480px */
 @media (max-width: 480px) {
-  /* Secciones — menos padding en mobile */
   .section {
     padding: 80px 24px;
   }
-
-  /* Nav.module.css */
-  .nav {
-    padding: 20px 24px;
+  .skills {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
   }
-  .links {
-    display: none;
-  } /* En mobile puedes ocultar los links del nav */
-
-  /* Hero.module.css */
-  .hero {
-    padding: 0 24px 48px;
-  }
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
+  .skill {
+    padding: 16px 4px 12px;
   }
 }
