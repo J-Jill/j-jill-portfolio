@@ -2,6 +2,13 @@ import type { Project } from "@/types";
 import distillImg from "@/assets/distill.webp";
 import wildSphereImg from "@/assets/wildsphere.webp";
 import memoryGameImg from "@/assets/memorygame.webp";
+import wildSphereDemo from "@/assets/wildsphere-demo.mp4";
+import wildSpherePoster from "@/assets/wildsphere-poster.jpg";
+import retailStoreDemo from "@/assets/retailstore-demo.mp4";
+import retailStorePoster from "@/assets/retailstore-poster.jpg";
+import retailStoreArchitecture from "@/assets/retailstore-architecture.jpg";
+import memoryGameDemo from "@/assets/memorygame-demo.mp4";
+import memoryGamePoster from "@/assets/memorygame-poster.jpg";
 
 /*
   Los proyectos como constante tipada.
@@ -41,6 +48,15 @@ export const projects: Project[] = [
     url: "https://wildsphere.netlify.app",
     githubUrl: "https://github.com/J-Jill/wildsphere",
     media: [
+      {
+        type: "video",
+        src: wildSphereDemo,
+        poster: wildSpherePoster,
+        alt: {
+          en: "Demo: exploring wildlife observations on the WildSphere globe",
+          es: "Demo: explorando observaciones de fauna en el globo de WildSphere",
+        },
+      },
       {
         type: "image",
         src: wildSphereImg,
@@ -98,8 +114,28 @@ export const projects: Project[] = [
       "DynamoDB",
       "Cognito",
     ],
+    url: "https://main.d1h48dgclkbfwa.amplifyapp.com/",
     githubUrl: "https://github.com/J-Jill/AmplifyWorkshop-RetailStore",
-    media: [],
+    media: [
+      {
+        type: "video",
+        src: retailStoreDemo,
+        poster: retailStorePoster,
+        alt: {
+          en: "Demo: browsing product categories in the RetailStore storefront",
+          es: "Demo: navegando por las categorías de productos de RetailStore",
+        },
+      },
+      {
+        type: "image",
+        src: retailStoreArchitecture,
+        fit: "contain",
+        alt: {
+          en: "RetailStore architecture: GitHub and Amplify Hosting CI/CD, CloudFront, Cognito auth, Next.js app, AppSync GraphQL and DynamoDB",
+          es: "Arquitectura de RetailStore: CI/CD con GitHub y Amplify Hosting, CloudFront, autenticación con Cognito, app Next.js, AppSync GraphQL y DynamoDB",
+        },
+      },
+    ],
   },
   {
     id: "04",
@@ -133,6 +169,15 @@ export const projects: Project[] = [
     url: "https://j-jillian.github.io/Memory-game/",
     githubUrl: "https://github.com/J-Jillian/Memory-game",
     media: [
+      {
+        type: "video",
+        src: memoryGameDemo,
+        poster: memoryGamePoster,
+        alt: {
+          en: "Demo: playing a round of the Memory Game",
+          es: "Demo: jugando una partida del Memory Game",
+        },
+      },
       {
         type: "image",
         src: memoryGameImg,

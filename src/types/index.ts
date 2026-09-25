@@ -3,6 +3,7 @@ export interface ProjectMedia {
   src: string;
   alt: { en: string; es: string };
   poster?: string; // solo vídeo: imagen mientras carga
+  fit?: "cover" | "contain"; // contain: diagramas que no deben recortarse
 }
 
 export interface Project {
