@@ -107,23 +107,6 @@
   letter-spacing: 0.07em;
 }
 
-.stack {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.stackTag {
-  font-family: var(--mono);
-  font-size: 10px;
-  padding: 5px 12px;
-  border: 1px solid var(--border2);
-  color: var(--elements);
-  letter-spacing: 0.04em;
-  border-radius: 100px;
-}
-
 .scrollIndicator {
   position: absolute;
   bottom: 28px;
@@ -304,23 +287,6 @@
   font-size: 11px;
   color: var(--elements);
   letter-spacing: 0.07em;
-}
-
-.stack {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.stackTag {
-  font-family: var(--mono);
-  font-size: 10px;
-  padding: 5px 12px;
-  border: 1px solid var(--border2);
-  color: var(--elements);
-  letter-spacing: 0.04em;
-  border-radius: 100px;
 }
 
 .scrollIndicator {

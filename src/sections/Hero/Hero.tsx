@@ -12,8 +12,8 @@ export function Hero() {
         <span className={styles.pulse} aria-hidden="true" />
         <span>
           {t(
-            "Full Stack Developer · React & TypeScript · AI-powered interfaces",
-            "Desarrolladora Full Stack · React & TypeScript · Interfaces impulsadas por IA",
+            "Full Stack Developer · AI-powered interfaces",
+            "Desarrolladora Full Stack · Interfaces impulsadas por IA",
           )}
         </span>
       </div>
@@ -28,28 +28,21 @@ export function Hero() {
         <p className={styles.desc}>
           {t("I build ", "Construyo ")}
           <strong>
-            {t("interfaces that think", "interfaces que piensan")}
+            {t("products that think", "productos que piensan")}
           </strong>
           {t(
-            " — shipping production-grade React and TypeScript at Accenture for 3+ years, with the design sensibility to make them look as good as they work.",
-            " — Llevo más de 3 años implementando React y TypeScript de nivel profesional en Accenture, con la sensibilidad de diseño necesaria para que funcionen tan bien como se ven.",
+            " — from AI features and APIs to the cloud they run on, designed to look as good as they work.",
+            " — desde funcionalidades con IA y APIs hasta la nube donde se ejecutan, diseñados para verse tan bien como funcionan.",
           )}
         </p>
 
         <div className={styles.meta}>
           <p className={styles.location}>
             {t(
-              "Málaga, Spain / Toronto from May 2026",
-              "Málaga, España / Toronto desde Mayo 2026",
+              "Toronto, Canada · Open to remote or hybrid",
+              "Toronto, Canadá · Disponible en remoto o híbrido",
             )}
           </p>
-          <div className={styles.stack}>
-            {["React", "TypeScript", "Vite", "Figma"].map((tech) => (
-              <span key={tech} className={styles.stackTag}>
-                {tech}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
 
