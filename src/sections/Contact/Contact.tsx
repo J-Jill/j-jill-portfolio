@@ -11,6 +11,9 @@ const INTERESTS = [
   "Contract",
 ];
 
+// Oculto de momento el selector "I'm looking for"
+const SHOW_INTERESTS = false;
+
 export function Contact() {
   const { t } = useLang();
   const titleRef = useScrollReveal<HTMLDivElement>();
@@ -106,23 +109,25 @@ export function Contact() {
           </div>
         </div>
 
-        <div className={`${styles.row} ${styles.full}`}>
-          <div className={styles.field}>
-            <p className={styles.label}>{t("I'm looking for", "Busco")}</p>
-            <div className={styles.pills}>
-              {INTERESTS.map((interest) => (
-                <button
-                  key={interest}
-                  type="button"
-                  className={`${styles.pill} ${interests.includes(interest) ? styles.pillActive : ""}`}
-                  onClick={() => toggleInterest(interest)}
-                  aria-pressed={interests.includes(interest)}>
-                  {interest}
-                </button>
-              ))}
+        {SHOW_INTERESTS && (
+          <div className={`${styles.row} ${styles.full}`}>
+            <div className={styles.field}>
+              <p className={styles.label}>{t("I'm looking for", "Busco")}</p>
+              <div className={styles.pills}>
+                {INTERESTS.map((interest) => (
+                  <button
+                    key={interest}
+                    type="button"
+                    className={`${styles.pill} ${interests.includes(interest) ? styles.pillActive : ""}`}
+                    onClick={() => toggleInterest(interest)}
+                    aria-pressed={interests.includes(interest)}>
+                    {interest}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
         <div className={`${styles.row} ${styles.full}`}>
           <div className={styles.field}>

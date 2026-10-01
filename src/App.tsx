@@ -3,8 +3,8 @@ import { Cursor } from "./components/Cursor/Cursor";
 import { Nav } from "./sections/Nav/Nav";
 import { Hero } from "./sections/Hero/Hero";
 import { Work } from "./sections/Work/Work";
-import { StandOut } from "./sections/StandOut/StandOut";
-import { RightFit } from "./sections/RightFit/RightFit";
+// import { StandOut } from "./sections/StandOut/StandOut";
+// import { RightFit } from "./sections/RightFit/RightFit";
 import { Testimonials } from "./sections/Testimonials/Testimonials";
 import { Stack } from "./sections/Stack/Stack";
 import { Contact } from "./sections/Contact/Contact";
@@ -21,8 +21,9 @@ export function App() {
         <Marquee />
         <Work />
         <Stack />
-        <StandOut />
-        <RightFit />
+        {/* Ocultas de momento: "What I bring" y "The right fit matters" */}
+        {/* <StandOut /> */}
+        {/* <RightFit /> */}
         <Testimonials />
         <Contact />
       </main>
