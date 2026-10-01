@@ -79,6 +79,7 @@ export const experience: ExperienceItem[] = [
     kind: "bootcamp",
     start: "2023-04",
     end: "2023-06",
+    location: { en: "Spain · Remote", es: "España · Remoto" },
     summary: {
       en: "9-week intensive bootcamp focused on Java development, from APIs and microservices to an Angular frontend.",
       es: "Bootcamp intensivo de 9 semanas centrado en desarrollo con Java, desde APIs y microservicios hasta un frontend en Angular.",
@@ -124,6 +125,7 @@ export const experience: ExperienceItem[] = [
     kind: "bootcamp",
     start: "2022-04",
     end: "2022-07",
+    location: { en: "Spain · Remote", es: "España · Remoto" },
     summary: {
       en: "Intensive bootcamp covering the full JavaScript stack, from frontend to backend.",
       es: "Bootcamp intensivo que cubre todo el stack de JavaScript, de frontend a backend.",
