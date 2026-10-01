@@ -2,6 +2,7 @@ import { LangProvider } from "./hooks/useLang";
 import { Cursor } from "./components/Cursor/Cursor";
 import { Nav } from "./sections/Nav/Nav";
 import { Hero } from "./sections/Hero/Hero";
+import { About } from "./sections/About/About";
 import { Work } from "./sections/Work/Work";
 // import { StandOut } from "./sections/StandOut/StandOut";
 // import { RightFit } from "./sections/RightFit/RightFit";
@@ -23,6 +24,7 @@ export function App() {
         <Work />
         <Stack />
         <Experience />
+        <About />
         {/* Ocultas de momento: "What I bring" y "The right fit matters" */}
         {/* <StandOut /> */}
         {/* <RightFit /> */}

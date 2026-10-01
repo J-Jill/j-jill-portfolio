@@ -1,0 +1,99 @@
+.section {
+  padding: 130px 52px;
+  border-top: 1px solid var(--border);
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--elements);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.label::before {
+  content: "—";
+  font-family: var(--sans);
+  font-weight: 300;
+}
+
+.title {
+  font-size: var(--text-section);
+  font-weight: 800;
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+  margin-bottom: 72px;
+}
+.titleEm {
+  font-style: italic;
+  color: var(--secondary);
+}
+
+/* Izquierda: el resumen profesional en grande. Derecha: la historia. */
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 80px;
+  align-items: start;
+}
+
+.lead {
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--secondary);
+  max-width: 64ch;
+}
+
+/* México → Estados Unidos → España → Canadá */
+.journey {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-top: 12px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: var(--text-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--elements);
+}
+.journey li + li::before {
+  content: "→";
+  margin-right: 12px;
+}
+.journey li:last-child {
+  color: var(--text);
+}
+
+/* Tablet: 768px — una sola columna */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Mobile: 480px */
+@media (max-width: 480px) {
+  .section {
+    padding: 80px 24px;
+  }
+}

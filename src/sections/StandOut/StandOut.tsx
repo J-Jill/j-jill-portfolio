@@ -9,7 +9,7 @@ export function StandOut() {
   const gridRef = useScrollReveal<HTMLDivElement>();
 
   return (
-    <section id="about" className={styles.section}>
+    <section id="standout" className={styles.section}>
       <p className={styles.label}>
         {t("Why I stand out", "Por qué me destaco")}
       </p>

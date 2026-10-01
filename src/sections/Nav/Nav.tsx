@@ -6,8 +6,7 @@ const NAV_LINKS = [
   { href: "#work", en: "Work", es: "Trabajo" },
   { href: "#skills", en: "Skills", es: "Skills" },
   { href: "#experience", en: "Experience", es: "Experiencia" },
-  // #about vive en StandOut, oculta de momento
-  // { href: "#about", en: "About", es: "Sobre mí" },
+  { href: "#about", en: "About", es: "Sobre mí" },
   { href: "#contact", en: "Contact", es: "Contacto" },
 ];
 // Los links como constante fuera del componente — no se recrean en cada render
