@@ -7,6 +7,7 @@ import { Work } from "./sections/Work/Work";
 // import { RightFit } from "./sections/RightFit/RightFit";
 import { Testimonials } from "./sections/Testimonials/Testimonials";
 import { Stack } from "./sections/Stack/Stack";
+import { Experience } from "./sections/Experience/Experience";
 import { Contact } from "./sections/Contact/Contact";
 import { Footer } from "./sections/Footer/Footer";
 import { Marquee } from "./sections/Marquee/Marquee";
@@ -21,6 +22,7 @@ export function App() {
         <Marquee />
         <Work />
         <Stack />
+        <Experience />
         {/* Ocultas de momento: "What I bring" y "The right fit matters" */}
         {/* <StandOut /> */}
         {/* <RightFit /> */}

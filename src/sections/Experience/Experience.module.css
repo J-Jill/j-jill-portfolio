@@ -1,0 +1,220 @@
+.section {
+  padding: 130px 52px;
+  border-top: 1px solid var(--border);
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--elements);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.label::before {
+  content: "—";
+  font-family: var(--sans);
+  font-weight: 300;
+}
+
+.title {
+  font-size: var(--text-section);
+  font-weight: 800;
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+  margin-bottom: 72px;
+}
+
+/*
+  Línea de tiempo: la línea vertical es un ::before del <ol>,
+  alineada con el centro de los logos (--logo / 2).
+*/
+.timeline {
+  --logo: 56px;
+  --gap: 32px;
+  position: relative;
+  list-style: none;
+  max-width: 920px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--logo) / 2);
+  bottom: calc(var(--logo) / 2);
+  left: calc(var(--logo) / 2);
+  width: 1px;
+  background: var(--border2);
+}
+
+.item {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--logo) minmax(0, 1fr);
+  column-gap: var(--gap);
+  padding-bottom: 56px;
+}
+.item:last-child {
+  padding-bottom: 0;
+}
+
+/* Fondo blanco: varios logos (Accenture, Instructr) son oscuros */
+.logoWrap {
+  width: var(--logo);
+  height: var(--logo);
+  padding: 8px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 0 0 6px var(--bg); /* corta la línea alrededor del logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.content {
+  padding-top: 4px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.org {
+  font-size: var(--text-h3);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.role {
+  font-size: var(--text-body);
+  color: var(--secondary);
+  margin-top: 6px;
+}
+
+.dates {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: var(--text-label);
+  color: var(--elements);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  padding-top: 6px;
+  text-transform: capitalize;
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.3;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .liveDot {
+    animation: none;
+  }
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-size: var(--text-label);
+  color: var(--elements);
+  letter-spacing: 0.05em;
+}
+.kind {
+  padding: 3px 10px;
+  border: 1px solid var(--border2);
+  border-radius: 100px;
+  color: var(--secondary);
+}
+
+.summary {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--secondary);
+  max-width: 64ch;
+}
+
+.highlights {
+  margin-top: 12px;
+  padding-left: 18px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--secondary);
+  max-width: 64ch;
+}
+.highlights li + li {
+  margin-top: 6px;
+}
+.highlights li::marker {
+  color: var(--elements);
+}
+
+.stack {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 16px;
+}
+.tech {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 3px 10px;
+  border: 1px solid var(--border2);
+  border-radius: 100px;
+  color: var(--elements);
+}
+
+/* Tablet: 768px — las fechas pasan debajo del rol */
+@media (max-width: 768px) {
+  .head {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .dates {
+    padding-top: 0;
+  }
+}
+
+/* Mobile: 480px */
+@media (max-width: 480px) {
+  .section {
+    padding: 80px 24px;
+  }
+  .timeline {
+    --logo: 44px;
+    --gap: 16px;
+  }
+  .logoWrap {
+    padding: 6px;
+    border-radius: 10px;
+  }
+  .item {
+    padding-bottom: 44px;
+  }
+}

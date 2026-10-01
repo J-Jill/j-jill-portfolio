@@ -56,3 +56,24 @@ export interface FitItem {
 }
 
 export type Lang = "en" | "es";
+
+export type ExperienceKind =
+  | "mentorship"
+  | "fulltime"
+  | "internship"
+  | "bootcamp"
+  | "degree";
+
+export interface ExperienceItem {
+  id: string;
+  org: string;
+  logo: string;
+  role: { en: string; es: string };
+  kind: ExperienceKind;
+  start: string; // "YYYY-MM" o "YYYY"
+  end?: string; // sin end = "Present"
+  location?: { en: string; es: string };
+  summary: { en: string; es: string };
+  highlights?: { en: string; es: string }[];
+  stack?: string[];
+}
